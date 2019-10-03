@@ -46,7 +46,7 @@ n/a = The selected SDK is not available on that OS.
 ## Getting started
 - [Windows](https://github.com/SmingHub/Sming/wiki/Windows-Quickstart)
 - [Linux](https://github.com/SmingHub/Sming/wiki/Linux-Quickstart)
-- [MacOS](https://github.com/SmingHub/Sming/wiki/MacOS-Quickstart)
+- [MacOS](https://github.com/raksagro/Sming/blob/masterRaks/ReadmeRaks.md)
 - [Docker](https://github.com/SmingHub/Sming/wiki/Docker-Quickstart)
 
 ## Optional features
