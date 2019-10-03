@@ -80,7 +80,7 @@ cd Sming/Sming
 # and it is the one where all new cool (unstable) features are landing. 
 
 # HERE is where you will go to Raks branch
-# git checkout masterRaks
+git checkout masterRaks
 
 # And finally set the SMING_HOME environment variable to point to <your-favourite-development-folder>/Sming/Sming
 
