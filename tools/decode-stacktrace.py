@@ -29,7 +29,7 @@ if __name__ == "__main__":
         usage()
         sys.exit(1)
 
-    command = "xtensa-lx106-elf-addr2line -aipfC -e '%s' " % sys.argv[1]
+    command = "/opt/esp-open-sdk/xtensa-lx106-elf/bin/xtensa-lx106-elf-addr2line -aipfC -e '%s' " % sys.argv[1]
     pipe = subprocess.Popen(shlex.split(command), bufsize=1, stdin=subprocess.PIPE)
 
     if len(sys.argv) > 2:
