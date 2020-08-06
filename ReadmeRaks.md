@@ -94,6 +94,18 @@ export SMING_HOME=<your-favourite-development-folder>/Sming/Sming
 
 Make sure to replace `<your-favourite-development-folder>` in the command above with the actual directory on your local disk.
 
+## Python/Serial Problems?
+In case an error involving serial or python happens, make sure you have python installed e the pyserial module
+
+Installing python:
+```
+brew install python
+```
+Installing pyserial:
+```
+pip install pyserial==3.4
+```
+
 ### (Optional step) 
 _(used by Make and Eclipse - make sure to quit Eclipse first)_
 
