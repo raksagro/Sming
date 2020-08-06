@@ -13,11 +13,6 @@ xcode-select --install
 ```shell
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-##### Eclipse
-_(Optional)_
-```
-brew install Caskroom/cask/eclipse-cpp
-```
 
 ## Install build toolchain
 ```shell 
@@ -70,7 +65,7 @@ You can also build it yourself [with Homebrew](https://github.com/pfalcon/esp-op
 ```shell
 cd <your-favourite-development-folder>/
 
-git clone https://github.com/SmingHub/Sming.git
+git clone https://github.com/raksagro/Sming.git
 # Warning: Do NOT use the --recursive option for the command above. 
 #          Our build mechanism will take care to get the third-party sources and patch them, if needed.
 
