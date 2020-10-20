@@ -53,6 +53,18 @@ void MqttClient::setCallback(MqttStringSubscriptionCallback callback)
 	this->callback = callback;
 }
 
+/*
+	Raks' temporary feature to generate
+	connect to broker event.
+
+	It's highly recommended to update to
+	Sming 4 that handles it the right way
+*/
+void MqttClient::setConnectCallback(MqttConnectCallback connectCallback)
+{
+	this->connectCallback = connectCallback;
+}
+
 void MqttClient::setKeepAlive(int seconds)
 {
 	keepAlive = seconds;
@@ -177,6 +189,10 @@ void MqttClient::debugPrintResponseType(int type, int len)
 	switch(type) {
 	case MQTT_MSG_CONNACK:
 		tp = "MQTT_MSG_CONNACK";
+		if(connectCallback)
+		{
+			connectCallback();
+		}
 		break;
 	case MQTT_MSG_PUBACK:
 		tp = "MQTT_MSG_PUBACK";

@@ -27,6 +27,15 @@
 typedef Delegate<void(String topic, String message)> MqttStringSubscriptionCallback;
 typedef Delegate<void(uint16_t msgId, int type)> MqttMessageDeliveredCallback;
 
+/*
+	Raks' temporary feature to generate
+	connect to broker event.
+
+	It's highly recommended to update to
+	Sming 4 that handles it the right way
+*/
+typedef Delegate<void()> MqttConnectCallback;
+
 class MqttClient;
 class URL;
 
@@ -48,6 +57,15 @@ public:
 	/** @brief  Provide a funcion to be called when a message is received from the broker
 	*/
 	void setCallback(MqttStringSubscriptionCallback subscriptionCallback = NULL);
+
+	/*
+		Raks' temporary feature to generate
+		connect to broker event.
+
+		It's highly recommended to update to
+		Sming 4 that handles it the right way
+	*/
+	void setConnectCallback(MqttConnectCallback connectCallback = NULL);
 
 	void setKeepAlive(int seconds);		 //send to broker
 	void setPingRepeatTime(int seconds); //used by client
@@ -118,6 +136,15 @@ private:
 	int pingRepeatTime = 20;
 	unsigned long lastMessage = 0;
 	HashMap<uint16_t, MqttMessageDeliveredCallback> onDeliveryQueue;
+
+	/*
+		Raks' temporary feature to generate
+		connect to broker event.
+
+		It's highly recommended to update to
+		Sming 4 that handles it the right way
+	*/
+	MqttConnectCallback connectCallback = NULL;
 };
 
 /** @} */
